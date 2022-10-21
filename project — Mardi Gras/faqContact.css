@@ -1,0 +1,158 @@
+/* FAQ Styles */
+
+.accordion {
+  margin: 5vw;
+}
+
+.accordion-button {
+  font-size: 14px;
+}
+
+@media (min-width: 1120px) {
+  .accordion {
+    margin: 0;
+  }
+  .accordion-button {
+    font-size: 20px;
+  }
+  .accordion-body {
+    font-size: 20px;
+  }
+}
+/* Contact Styles */
+
+.info p {
+  text-align: center;
+  padding: 5px;
+  margin-top: 5vh;
+  background-color: rgba(255, 192, 44, 0.2);
+}
+
+h3 {
+  text-align: center;
+}
+input:active {
+  border: none;
+  outline: none;
+}
+input,
+textarea {
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+form {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
+  gap: 5px 5px;
+}
+
+#name {
+  border: 5px solid rgb(112, 192, 44);
+  text-decoration: none;
+}
+#email {
+  border: 5px solid rgb(255, 192, 44);
+}
+.inputButton {
+  border: 5px solid rgb(255, 192, 44);
+}
+#tel {
+  border: 5px solid rgb(167, 82, 170);
+}
+
+#text {
+  border: 5px solid rgb(5, 82, 170);
+}
+
+.cityHall {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.NOmap {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+#box {
+  text-align: center;
+  color: brown;
+}
+
+@media (min-width: 762px) {
+  form {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(5, auto);
+    gap: 5px 5px;
+  }
+
+  #text {
+    grid-column: 1/4;
+    grid-row: 2/4;
+  }
+  .inputButton {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  /* section2 styles */
+  .contactInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10vh;
+  }
+}
+
+/* Quiz */
+
+#startGame {
+  font-family: "Henny Penny";
+}
+
+#header_quiz {
+  margin-bottom: 10vh;
+}
+.quiz {
+  min-height: 100vh;
+}
+.footer_quiz {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  min-height: 50px;
+}
+#score a {
+  font-family: "Pattaya";
+  color: black;
+}
+
+@media (max-width: 1120px) {
+  #trivia {
+    min-width: 100vw;
+    max-width: 700px;
+  }
+  #score {
+    min-width: 95vw;
+    max-width: 700px;
+  }
+}
+@media (min-width: 1120px) {
+  #trivia {
+    min-width: 1110px;
+  }
+  #score {
+    min-height: 150px;
+    padding-top: 10px;
+    min-width: 1110px;
+  }
+}

@@ -1,0 +1,415 @@
+@font-face {
+  font-family: Pattaya;
+  src: url(helping_codes/Pattaya-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(helping_codes/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Henny Penny";
+  src: url(helping_codes/HennyPenny-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    to left top,
+
+    rgb(242, 242, 242),
+    rgb(255, 205, 0),
+    rgb(112, 192, 44),
+    rgb(167, 82, 170),
+    rgb(5, 5, 5)
+  );
+  background-repeat: no-repeat;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+
+.main-container1 {
+  padding: 5vw;
+}
+
+/* //Nav Bar */
+.brand-logo {
+  display: none;
+}
+.mynavbar {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(255, 205, 0);
+  color: black;
+}
+
+.mynavbar-links {
+  height: max-content;
+}
+
+.mynavbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.mynavbar-links li {
+  list-style: none;
+}
+
+.mynavbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 2rem;
+  font-family: "Henny Penny";
+  font-weight: bold;
+}
+
+.mynavbar-links li a:hover {
+  color: rgb(167, 82, 170);
+  background-color: rgb(112, 192, 44);
+  border-radius: 50%;
+  text-decoration: underline;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50px;
+  height: 50px;
+}
+
+.toggle-button .bar {
+  height: 7px;
+  width: 100%;
+  background-color: rgb(167, 82, 170);
+  border-radius: 10px;
+}
+.toggle-button .bar:nth-child(2) {
+  background-color: rgb(112, 192, 44);
+}
+
+@media (max-width: 768px) {
+  .mynavbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    min-height: 70px;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .mynavbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .mynavbar-links ul {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .mynavbar-links ul li {
+    text-align: center;
+  }
+
+  .mynavbar-links ul li a {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+  }
+
+  .mynavbar-links.active {
+    display: flex;
+  }
+
+  .copyright {
+    font-size: 9px;
+  }
+}
+
+/* Caroussel */
+.carousel {
+  margin-top: 20px;
+  max-height: 900px;
+}
+h3 {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: Pattaya;
+  border-radius: 50%;
+}
+
+/* Main and Main-1*/
+
+main h2 {
+  font-size: 1.2em;
+  text-align: justify;
+  font-family: Pattaya;
+}
+main p {
+  font-size: 1em;
+  text-align: justify;
+}
+
+/* Timer */
+#demo {
+  text-align: center;
+  font-size: 5vw;
+  font-family: "Henny Penny";
+  border-radius: 50px;
+  padding-top: 10px;
+  background-color: rgba(255, 205, 0, 0.5);
+}
+
+/* Main-2 */
+
+.cardie {
+  display: contents;
+  text-decoration: none;
+}
+.main-container_item h6 {
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+/* Grid */
+
+.main-container2 {
+  display: grid;
+  justify-items: stretch;
+  grid-template-rows: 1fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
+  gap: 5px;
+  margin: 10px;
+  margin-bottom: 0;
+  text-align: center;
+  grid-template-areas:
+    "even1"
+    "ace_hotel"
+    "children_museum"
+    "haunted_museum"
+    "dead_museum"
+    "parking"
+    "ritz_hotel"
+    "sheraton_hotel"
+    "walks_ons";
+}
+
+.even2,
+.even3,
+.even4,
+.even5,
+.even6,
+.even7 {
+  display: none;
+}
+.card {
+  display: none;
+}
+
+.even1 p {
+  font-family: "Henny Penny";
+  text-align: center;
+}
+
+.ace_hotel {
+  background-image: url(images/ace-hotel-new-orleans-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: ace_hotel;
+  justify-self: stretch;
+}
+
+.children_museum {
+  background-image: url(images/children_museum.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: children_museum;
+}
+
+.haunted_museum {
+  background-image: url(images/haunted-museum.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: haunted_museum;
+}
+
+.dead_museum {
+  background-image: url(images/Museum-of-Death-New-Orleans.jpg);
+  background-size: cover;
+  grid-area: dead_museum;
+}
+
+.parking {
+  background-image: url(images/parking.jpg);
+  background-size: cover;
+  grid-area: parking;
+}
+
+.ritz_hotel {
+  background-image: url(images/ritz_hotel.jpg);
+  background-size: cover;
+  grid-area: ritz_hotel;
+}
+.sheraton_hotel {
+  background-image: url(images/sheraton_hotel.jpg);
+  background-size: cover;
+  grid-area: sheraton_hotel;
+}
+.walks_ons {
+  background-image: url(images/walk_ons.jpg);
+  background-size: cover;
+  grid-area: walks_ons;
+}
+.even1 {
+  background-color: rgb(255, 205, 0);
+  grid-area: even1;
+  padding-top: 10px;
+}
+.even2 {
+  background-color: rgb(112, 192, 44);
+
+  grid-area: even2;
+}
+.even3 {
+  background-color: rgb(167, 82, 170);
+  grid-area: even3;
+}
+.even4 {
+  background-color: rgb(255, 205, 0);
+  grid-area: even4;
+}
+.even5 {
+  background-color: rgb(167, 82, 170);
+  grid-area: even5;
+}
+.even6 {
+  background-color: rgb(112, 192, 44);
+  grid-area: even6;
+}
+.even7 {
+  background-color: rgb(255, 205, 0);
+  grid-area: even7;
+}
+
+/* CARD */
+
+.close {
+  font-size: x-large;
+}
+
+@media (min-width: 768px) {
+  /* Nav Bar */
+  .brand-logo {
+    display: block;
+  }
+
+  .main-container1 {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 5vw;
+  }
+
+  /* Carousel */
+  .carousel {
+    margin-top: 0;
+  }
+
+  /* Main Container2 */
+
+  .main-container2 {
+    grid-template-areas:
+      "even1 even1"
+      "ace_hotel haunted_museum"
+      "dead_museum parking"
+      " ritz_hotel sheraton_hotel"
+      " children_museum walks_ons";
+    grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
+    gap: 5px;
+  }
+  .even2,
+  .even3,
+  .even4,
+  .even5,
+  .even6,
+  .even7 {
+    display: none;
+  }
+  .item1,
+  .item2,
+  .item3,
+  .item4,
+  .item5,
+  .item6,
+  .item7,
+  .item8 {
+    cursor: pointer;
+  }
+  .even p {
+    font-family: "Henny Penny";
+    font-size: 3em;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1020px) {
+  .mynavbar-links ul li a {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  main h2 {
+    font-size: 2em;
+  }
+  main p {
+    font-size: 1.5em;
+  }
+
+  .main-container2 {
+    grid-template-areas:
+      "ace_hotel even1 children_museum"
+      "even2 haunted_museum even3"
+      "dead_museum even4 parking"
+      "even5 ritz_hotel even6"
+      "sheraton_hotel even7 walks_ons";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px;
+  }
+  .even1,
+  .even2,
+  .even3,
+  .even4,
+  .even5,
+  .even6,
+  .even7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 33.3vw;
+    height: 30vh;
+  }
+}
+
+/* Footer */
+footer {
+  margin: 0;
+  height: 10vh;
+  background-color: rgb(255, 205, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

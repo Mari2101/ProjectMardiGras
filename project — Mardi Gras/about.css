@@ -1,0 +1,72 @@
+header h1 {
+  text-align: center;
+  font-family: "Henny Penny";
+  font-weight: bold;
+  margin: 20px;
+  margin-top: 50px;
+}
+
+.letter_of_Mayor {
+  margin-bottom: 30px;
+}
+.letter_of_Mayor div {
+  border: 4px dashed rgb(167, 82, 170);
+  margin: 0 auto;
+  width: 70vw;
+  height: fit-content;
+  background-color: rgb(255, 205, 0);
+}
+.letter_of_Mayor img {
+  border-radius: 50%;
+  float: left;
+}
+.letter_of_Mayor p {
+  font-family: "Ms Madi", cursive;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 1.5em;
+}
+
+.letter_of_Mayor div h3 {
+  text-align: center;
+  border-bottom: 4px dashed rgb(167, 82, 170);
+  background-color: rgba(112, 192, 44, 0.8);
+  padding: 10px;
+}
+
+main div p {
+  font-size: 1.4em;
+  font-family: Pattaya;
+}
+
+.main-container1 {
+  padding-top: 10px;
+}
+
+@media (max-width: 720px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .letter_of_Mayor div {
+    width: 95vw;
+  }
+
+  main div p {
+    font-size: 1em;
+    font-family: Pattaya;
+  }
+
+  .letter_of_Mayor p {
+    font-family: "Ms Madi", cursive;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 1em;
+  }
+
+  .photo {
+    width: 100px;
+    height: 100px;
+  }
+}
